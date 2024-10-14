@@ -1,0 +1,10 @@
+[Unit]
+Description=Backup Daemon
+
+[Service]
+User=slava
+ExecStart=/usr/bin/python3 /home/slava/scripts/daemon/backup_daemon.py start --config /home/slava/scripts/daemon/backup_config.ini
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
